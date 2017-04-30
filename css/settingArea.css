@@ -1,0 +1,21 @@
+body {
+	font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
+	font-size: 100%;
+	
+}
+.page-list li {
+	display: block;
+	list-style: none;
+
+}
+.page-list .setting {
+	padding-left: 40px;
+	position: relative;
+}
+.page-list .setting:before {
+	content: '↓';
+	position: absolute;
+	left: 10px;
+	top: 0;
+}
+

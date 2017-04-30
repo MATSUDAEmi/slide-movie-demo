@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/settingArea.css">
+	<link rel="stylesheet" href="css/slide.css">
+</head>
+<body>
+	<section class="setting-form">
+		<form>
+			<h1>slde action settings</h1>
+			<ul class="page-list"></ul>
+			<button id="makeSlide">けってい</button>
+		</form>
+		<p id="startSlide">スライド表示開始</p>
+	</section>
+
+	<div class="slide-flame">
+	</div>
+
+<script type="text/template" id="settingsTmpl">
+	<li>
+		<p class="count">${num}ページめ</p>
+		{{if num + 1 !== pages.length}}
+		<p class="setting">
+			<select name="styles" id="style${num}">
+				<option value="to-right" selected>右へスライド</option>
+				<option value="to-left">左へスライド</option>
+				<option value="to-top">上へスライド</option>
+				<option value="to-bottom">下へスライド</option>
+				<option value="fade">フェード</option>
+				<option value="zoom">ズーム</option>
+			</select>
+			{{/if}}
+		</p>
+	</li>	
+</script>
+
+<script type="text/template" id="slideTmpl">
+	
+	<section class="page" id="slide${num}">
+		<h1>page${num}</h1>
+		<p>${num}ページ目の内容です。</p>
+	</section>
+	
+</script>
+
+
+<script src="scripts/jquery-3.2.1.min.js"></script>
+<script src="scripts/jquery.tmpl.min.js"></script>
+<script src="scripts/index.js"></script>
+</body>
+</html>
